@@ -4,13 +4,17 @@ let cards = []
 let sum = 0; 
 let blackjack = false;let alive = false;
 let message = ""
-let messageEl = document.getElementById("message-el")
+let messageEl = document.querySelector("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardEl = document.querySelector("#cards-el")
 let first = 0
 let second = 0
 let newcard = 0
 let alt = ""
+let playerName = "Soham"
+let playerChips = 145
+let playerEl = document.querySelector("#player-el")
+playerEl.textContent = playerName + ": $" + playerChips
 
 /*-----------------Random Card Generator------------------*/
 
