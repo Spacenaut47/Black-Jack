@@ -5,7 +5,8 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardEl = document.querySelector("#cards-el")
-
+let first = 0
+let second = 0
 
 function getRandomCard(){
     let randnum = Math.floor(Math.random()*13)+1
@@ -41,8 +42,8 @@ function renderGame(){
 
 function start(){
     alive = true
-    let first = getRandomCard();
-    let second = getRandomCard();
+    first = getRandomCard();
+    second = getRandomCard();
     cards = [first,second]
     sum = cards[0]+cards[1];
     renderGame()
