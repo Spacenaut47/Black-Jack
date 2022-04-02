@@ -64,8 +64,10 @@ function start(){
     second = getRandomCard()
     cards = [first,second]
     sum = cards[0]+cards[1]
-    if(player.Chips >= 50){
+    if(player.Chips > 0){
         renderGame()
+        player.Chips = player.Chips - 50;
+        playerEl.textContent = player.Name+": $"+ player.Chips
     }else {
         alert("You have no money left")
     }
