@@ -4,17 +4,19 @@ let cards = []
 let sum = 0; 
 let blackjack = false;let alive = false;
 let message = ""
-let messageEl = document.querySelector("message-el")
+let messageEl = document.querySelector("#message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardEl = document.querySelector("#cards-el")
 let first = 0
 let second = 0
 let newcard = 0
 let alt = ""
-let playerName = "Soham"
-let playerChips = 145
+let player = {
+    Name: "Soham",
+    Chips: 200
+}
 let playerEl = document.querySelector("#player-el")
-playerEl.textContent = playerName + ": $" + playerChips
+playerEl.textContent = player.Name + ": $" + player.Chips
 
 /*-----------------Random Card Generator------------------*/
 
@@ -60,7 +62,11 @@ function start(){
     second = getRandomCard()
     cards = [first,second]
     sum = cards[0]+cards[1]
-    renderGame()
+    if(player.Chips >= 50){
+        renderGame()
+    }else {
+        alert("You have no money left")
+    }
 }
 
 /*-----------------Adding New cards---------*/
