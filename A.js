@@ -20,7 +20,9 @@ function getRandomCard(){
     else if(randnum == 1){
         randnum = 11
     }
-    return randnum
+    else{
+        return randnum
+    }
 }
 
 /*----------------- Rendering the cards -----------------*/
