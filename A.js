@@ -1,6 +1,6 @@
 /*----------------- DECLARATIONS -----------------*/
 
-let first = 10;let second = 4;
+let first = getRandomCard();let second = getRandomCard();
 let cards = [first,second]
 let sum = cards[0]+cards[1]; 
 let blackjack = false;let alive = true;
@@ -8,6 +8,12 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardEl = document.querySelector("#cards-el")
+
+/*----------------- RANDOM CARDS -----------------*/
+
+function getRandomCard(){
+    return 5;
+}
 
 /*----------------- Rendering the cards -----------------*/
 
@@ -34,7 +40,7 @@ function start(){
 }
 
 function newCard(){
-    let newcard =+ 7
+    let newcard = getRandomCard()
     sum += newcard
     cards.push(newcard)
     renderGame()
