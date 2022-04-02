@@ -10,6 +10,7 @@ let cardEl = document.querySelector("#cards-el")
 let first = 0
 let second = 0
 let newcard = 0
+let alt = ""
 
 /*-----------------Random Card Generator------------------*/
 
@@ -66,5 +67,9 @@ function newCard(){
         sum += newcard
         cards.push(newcard)
         renderGame()
+    }
+    else{
+        alt = "You cant draw more cards\n"
+        alert(alt);
     }
 }
