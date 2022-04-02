@@ -1,0 +1,39 @@
+body {
+    background-color: green;
+    text-align: center;
+    text-shadow: 10in;
+}
+h1 {
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: gold;
+    font-style: italic;
+    font-weight: 400;
+}
+p {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+    color: white;
+}
+#message-el {
+    font-size: 30px;
+    color: wheat;
+}
+button {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    color: crimson;
+    background-color: goldenrod;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 8px;
+}
