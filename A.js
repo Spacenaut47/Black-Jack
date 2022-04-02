@@ -1,16 +1,11 @@
-/*----------------- DECLARATIONS -----------------*/
-
-let first = getRandomCard();
-let second = getRandomCard();
-let cards = [first,second]
-let sum = cards[0]+cards[1]; 
-let blackjack = false;let alive = true;
+let cards = []
+let sum = 0; 
+let blackjack = false;let alive = false;
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardEl = document.querySelector("#cards-el")
 
-/*----------------- RANDOM CARDS -----------------*/
 
 function getRandomCard(){
     let randnum = Math.floor(Math.random()*13)+1
@@ -25,7 +20,6 @@ function getRandomCard(){
     }
 }
 
-/*----------------- Rendering the cards -----------------*/
 
 function renderGame(){
     if(sum <= 20){
@@ -46,6 +40,11 @@ function renderGame(){
 }
 
 function start(){
+    alive = true
+    let first = getRandomCard();
+    let second = getRandomCard();
+    cards = [first,second]
+    sum = cards[0]+cards[1];
     renderGame()
 }
 
