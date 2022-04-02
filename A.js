@@ -1,6 +1,7 @@
 /*----------------- DECLARATIONS -----------------*/
 
-let first = getRandomCard();let second = getRandomCard();
+let first = getRandomCard();
+let second = getRandomCard();
 let cards = [first,second]
 let sum = cards[0]+cards[1]; 
 let blackjack = false;let alive = true;
@@ -12,7 +13,14 @@ let cardEl = document.querySelector("#cards-el")
 /*----------------- RANDOM CARDS -----------------*/
 
 function getRandomCard(){
-    return 5;
+    let randnum = Math.floor(Math.random()*13)+1
+    if(randnum === 11 && randnum === 12 && randnum == 13){
+        randnum = 10
+    }
+    else if(randnum == 1){
+        randnum = 11
+    }
+    return randnum
 }
 
 /*----------------- Rendering the cards -----------------*/
