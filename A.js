@@ -1,4 +1,5 @@
 /*-----------------Declarations------------------*/
+
 let cards = []
 let sum = 0; 
 let blackjack = false;let alive = false;
@@ -8,7 +9,9 @@ let sumEl = document.querySelector("#sum-el")
 let cardEl = document.querySelector("#cards-el")
 let first = 0
 let second = 0
+
 /*-----------------Random Card Generator------------------*/
+
 function getRandomCard(){
     let randnum = Math.floor(Math.random()*13)+1
     if(randnum > 10){
@@ -21,7 +24,9 @@ function getRandomCard(){
         return randnum
     }
 }
+
 /*-----------------Rendering the game------------------*/
+
 function renderGame(){
     if(sum <= 20){
         message = "Do you want to draw a new card?";
@@ -39,7 +44,9 @@ function renderGame(){
     }
     messageEl.textContent = message;
 }
+
 /*-----------------Starting the Game------------------*/
+
 function start(){
     alive = true
     first = getRandomCard();
