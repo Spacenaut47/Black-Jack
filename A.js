@@ -14,11 +14,11 @@ let cardEl = document.querySelector("#cards-el")
 
 function getRandomCard(){
     let randnum = Math.floor(Math.random()*13)+1
-    if(randnum === 11 && randnum === 12 && randnum == 13){
-        randnum = 10
+    if(randnum > 10){
+        return 10
     }
     else if(randnum == 1){
-        randnum = 11
+        return 11
     }
     else{
         return randnum
