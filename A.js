@@ -16,7 +16,8 @@ let player = {
     Chips: 200
 }
 let playerEl = document.querySelector("#player-el")
-playerEl.textContent = player.Name + ": $" + player.Chips
+playerEl.textContent = player.Name+": $"+ player.Chips
+
 
 /*-----------------Random Card Generator------------------*/
 
@@ -41,6 +42,7 @@ function renderGame(){
         message = "Do you want to draw a new card?"
     }else if(sum === 21){
         blackjack = true
+        alive = false
         message = "You've got blackjack"
     }else {
         alive = false;
@@ -72,7 +74,7 @@ function start(){
 /*-----------------Adding New cards---------*/
 
 function newCard(){
-    if(alive === true && blackjack === false){
+    if(alive === true){
         newcard = getRandomCard()
         sum += newcard
         cards.push(newcard)
