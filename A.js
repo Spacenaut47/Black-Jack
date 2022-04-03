@@ -87,3 +87,10 @@ function newCard(){
         alert(alt);
     }
 }
+/*-----------------Adding More Money---------*/
+function addMoney()
+{
+    player.Chips += 100
+    console.log(player.Chips);
+    playerEl.textContent = player.Name+": $"+ player.Chips
+}
